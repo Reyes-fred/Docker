@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Alfredo Reyes "reyes-fred@hotmail.com"
 
 RUN apt-get update && apt-get upgrade -y 
-RUN apt-get install -y build-essential cmake pkg-config libjpeg8-dev \
+RUN apt-get install -y sudo build-essential cmake pkg-config libjpeg8-dev \
     libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev libavformat-dev \
     libswscale-dev libv4l-dev libxvidcore-dev libx264-dev \
     libatlas-base-dev gfortran wget unzip python-dev python-numpy \
@@ -43,8 +43,5 @@ RUN git clone https://github.com/Reyes-fred/Xiaomin.git
 
 WORKDIR /Xiaomin
 
-ADD . /Xiaomin/Setup/setup.sh
-ADD . /Xiaomin/Setup/config.sh
-ADD . /Xiaomin/Scripts/ImageRecognition/FaceDection/
+RUN cd Setup/ && sh setup.sh
 
-CMD ["bash"]
