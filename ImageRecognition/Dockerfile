@@ -12,11 +12,11 @@ RUN apt-get install -y sudo build-essential cmake pkg-config libjpeg8-dev \
 
 RUN python -m pip install --upgrade pip && pip3 install numpy
 
-RUN wget -O opencv3.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
-    unzip -q opencv3.zip && mv /opencv-3.1.0 /opencv
+RUN wget -O opencv3.zip https://github.com/Itseez/opencv/archive/3.4.2.zip && \
+    unzip -q opencv3.zip && mv /opencv-3.4.2 /opencv
 
-RUN wget -O opencv_contrib3.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip && \
-    unzip -q opencv_contrib3.zip && mv /opencv_contrib-3.1.0 /opencv_contrib
+RUN wget -O opencv_contrib3.zip https://github.com/Itseez/opencv_contrib/archive/3.4.2.zip && \
+    unzip -q opencv_contrib3.zip && mv /opencv_contrib-3.4.2 /opencv_contrib
 
 RUN mkdir /opencv/build
 
@@ -35,7 +35,7 @@ RUN  cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 RUN make -j4 && make install && ldconfig
 
-RUN rm -rf opencv_contrib3.zip opencv3.zip ~/opencv-3.1.0
+RUN rm -rf opencv_contrib3.zip opencv3.zip ~/opencv-3.4.2
 
 WORKDIR "/"
 

@@ -13,5 +13,5 @@ python3 Scripts/ImageRecognition/TrackObject/objectdata.py --filter HSV --webcam
 python Scripts/ImageRecognition/TrackObject/object_movement.py
 
 Real-time object detect
-python Scripts/ImageRecognition/RealtimeObjectDetection/realDetectionl.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel
+python Scripts/ImageRecognition/RealtimeObjectDetection/realDetectionl.py --prototxt Scripts/ImageRecognition/RealtimeObjectDetection/MobileNetSSD_deploy.prototxt.txt --model Scripts/ImageRecognition/RealtimeObjectDetection/MobileNetSSD_deploy.caffemodel
 
