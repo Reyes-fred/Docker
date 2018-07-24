@@ -2,6 +2,16 @@ xhost +local:docker
 sudo docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --device /dev/video0  xiaomin
 
 On Docker / terminal
-For execute Face python example:
+
 $ source Setup/config.sh
+
+Face Detection
 $ python3 Scripts/ImageRecognition/FaceDection/faces.py 
+
+Object Tracking
+python3 Scripts/ImageRecognition/TrackObject/objectdata.py --filter HSV --webcam
+python Scripts/ImageRecognition/TrackObject/object_movement.py
+
+Real-time object detect
+python Scripts/ImageRecognition/RealtimeObjectDetection/realDetectionl.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel
+
