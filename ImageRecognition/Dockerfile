@@ -35,6 +35,8 @@ RUN  cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 RUN make -j4 && make install && ldconfig
 
+RUN rm -rf opencv_contrib3.zip opencv3.zip ~/opencv-3.1.0
+
 WORKDIR "/"
 
 RUN git clone https://github.com/Reyes-fred/Xiaomin.git
