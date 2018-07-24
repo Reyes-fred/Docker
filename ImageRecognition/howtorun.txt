@@ -3,5 +3,5 @@ sudo docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --devic
 
 On Docker / terminal
 For execute Face python example:
-$ source /Setup/config.sh
-$ python3 /Scripts/ImageRecognition/FaceDection/faces.py 
+$ source Setup/config.sh
+$ python3 Scripts/ImageRecognition/FaceDection/faces.py 
