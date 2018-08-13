@@ -8,7 +8,7 @@ RUN apt-get install -y sudo build-essential cmake pkg-config libjpeg8-dev \
     libatlas-base-dev gfortran wget unzip python-dev python-numpy \
     libtbb2 libtbb-dev libjpeg-dev libpng-dev libjasper-dev libdc1394-22-dev \
     libgtk-3-dev python2.7-dev python3.5-dev git python-pip python3-pip python3-testresources \
-    libcanberra-gtk-module
+    libcanberra-gtk-module nano
 
 RUN python -m pip install --upgrade pip && pip3 install numpy
 
