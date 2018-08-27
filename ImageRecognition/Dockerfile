@@ -31,7 +31,9 @@ RUN  cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D PYTHON3_EXECUTABLE=/usr/bin/python3.5 \
     -D BUILD_EXAMPLES=ON \
     -D BUILD_NEW_PYTHON_SUPPORT=ON \ 
-    -D WITH_V4L=ON ..
+    -D WITH_V4L=ON \
+    -D WITH_GSTREAMER=ON \
+    -D WITH_FFMPEG=ON ..
 
 RUN make -j4 && make install && ldconfig
 
